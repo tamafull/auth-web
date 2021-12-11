@@ -6,10 +6,10 @@ import Signup from './components/Signup.vue'
 import store from './store'
 
 const routes = [
-  { path: '/auth-web/', name: 'home', component: Home },
-  { path: '/auth-web/login', name: 'login', component: Login },
-  { path: '/auth-web/logout', name: 'logout', component: Logout },
-  { path: '/auth-web/signup', name: 'signup', component: Signup },
+  { path: '/', name: 'home', component: Home },
+  { path: '/login', name: 'login', component: Login },
+  { path: '/logout', name: 'logout', component: Logout },
+  { path: '/signup', name: 'signup', component: Signup },
 ]
 
 const router = createRouter({
