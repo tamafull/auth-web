@@ -11,8 +11,10 @@ app.mount('#app')
 
 if (process.env.NODE_ENV === 'production') {
   // TODO: Change after initial deploy.
+  console.log(process.env.NODE_ENV)
   axios.defaults.baseURL = 'http://localhost:3000';
 } else {
+  console.log(process.env.NODE_ENV)
   axios.defaults.baseURL = 'http://localhost:3000';
 }
 
