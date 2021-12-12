@@ -6,10 +6,10 @@ import Signup from './components/Signup.vue'
 import store from './store'
 
 const routes = [
-  { path: './', name: 'home', component: Home },
-  { path: './login', name: 'login', component: Login },
-  { path: './logout', name: 'logout', component: Logout },
-  { path: './signup', name: 'signup', component: Signup },
+  { path: '/', name: 'home', component: Home },
+  { path: '/login', name: 'login', component: Login },
+  { path: '/logout', name: 'logout', component: Logout },
+  { path: '/signup', name: 'signup', component: Signup },
 ]
 
 const router = createRouter({
