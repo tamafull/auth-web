@@ -6,10 +6,10 @@ import Signup from './components/Signup.vue'
 import store from './store'
 
 const routes = [
-  { path: '/', name: 'home', component: Home },
-  { path: '/login', name: 'login', component: Login },
-  { path: '/logout', name: 'logout', component: Logout },
-  { path: '/signup', name: 'signup', component: Signup },
+  { path: './', name: 'home', component: Home },
+  { path: './login', name: 'login', component: Login },
+  { path: './logout', name: 'logout', component: Logout },
+  { path: './signup', name: 'signup', component: Signup },
 ]
 
 const router = createRouter({
@@ -18,6 +18,8 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
+  console.log(to)
+  console.log(from)
   const unauth_view = to.name == 'login' || to.name == 'signup'
 
   if (!unauth_view && !store.getters.token) next({ name: 'login' })
