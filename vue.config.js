@@ -1,5 +1,5 @@
 module.exports = {
     outputDir: 'docs',
     assetsDir: './',
-    publicPath: 'auth-web'
+    publicPath: '/auth-web/'
   }
