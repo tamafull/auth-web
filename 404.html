@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <title>Redirect</title>
     <script type="text/javascript">
-      let segmentCount = 2;
+      let segmentCount = 1;
       let l = window.location;
       let port = l.port ? ':' + l.port : '';
       l.replace(
-        `${l.protocol}//${l.hostname}${port}/?p=${l.pathname.split('/').slice(0, 1 + segmentCount).join('/')}`
-      )
+        // `${l.protocol}//${l.hostname}${port}/?p=${l.pathname.split('/').slice(0, 1 + segmentCount).join('/')}`
+        `${l.protocol}//${l.hostname}${port}/${l.pathname.split('/').slice(0, 2).join('/')}/?p=${l.pathname.split('/').slice(1, 2 + segmentCount).join('/')}`
+        )
     </script>
   </head>
   <body>
