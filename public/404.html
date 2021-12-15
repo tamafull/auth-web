@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <script>
+    // https://qiita.com/hiyoko3/items/64e0658439c66b16e18c のパクリ
+    // GitHub PagesでSPAを作った場合にリロードすると404になる対策
+    let secmentCount = 1;
+    let l = window.location;
+    let port = l.port ? ':' + l.port : ''
+    l.replace(
+      // `${l.protocol}//${l.hostname}${port}/?p=${l.pathname.split('/').slice(0, 1 + segmentCount).join('/')}`
+      `${l.protocol}//${l.hostname}${port}${l.pathname.split('/').slice(0, 2).join('/')}/?p=${l.pathname.split('/').slice(2, 2 + segmentCount).join('/')}`
+    )
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NotFound</title>
+</head>
+<body>
+</body>
+</html>
